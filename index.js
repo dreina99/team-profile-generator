@@ -12,22 +12,22 @@ const promptUserManger = () => {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'manager',
+            name: 'name',
             message: 'Enter the name of your team manager:'
         },
         {
             type: 'input',
-            name: 'manager-id',
+            name: 'id',
             message: 'Enter the id of the team manager:'
         },
         {
             type: 'input',
-            name: 'manager-email',
+            name: 'email',
             message: 'Enter the email of the team manager:'
         },
         {
             type: 'input',
-            name: 'manager-office',
+            name: 'office',
             message: 'Enter the office number of the team manager:'
         },
     ])
@@ -42,22 +42,22 @@ const getEngineer = () => {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'engName',
+            name: 'name',
             message: 'Enter the name of the engineer:'
         },
         {
             type: 'input',
-            name: 'engID',
+            name: 'id',
             message: 'Enter the ID of the engineer:'
         },
         {
             type:'input',
-            name: 'engEmail',
+            name: 'email',
             message: 'Enter the email of the engineer:'
         },
         {
             type: 'input',
-            name: 'engGithub',
+            name: 'github',
             message: 'Enter the github username of the engineer:'
         },
     ])
@@ -72,22 +72,22 @@ const getIntern = () => {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'intrnName',
+            name: 'name',
             message: 'Enter the name of the intern:'
         },
         {
             type: 'input',
-            name: 'intrnID',
+            name: 'id',
             message: 'Enter the ID of the intern:'
         },
         {
             type:'input',
-            name: 'intrnEmail',
+            name: 'email',
             message: 'Enter the email of the intern:'
         },
         {
             type: 'input',
-            name: 'intrnSchool',
+            name: 'school',
             message: 'Enter the name of the school attended by the intern:'
         },
     ])
@@ -134,33 +134,6 @@ const menuPage = () => {
 
 function init() {
     promptUserManger();
-    
-    /*
-    .then(managerInfo => {
-        managerInfo.role = 'Manager';
-        console.log(managerInfo);
-        employees.push(managerInfo);
-    })
-    .then(() => {
-        return menuPage();
-    })
-    .then(menuInfo => {
-        //console.log(menuInfo);
-        if(menuInfo.next[0] === 'Complete Team')
-            // call generate site
-            console.log('done');
-        else if(menuInfo.next[0] === 'Add Engineer')
-            getEngineer()
-            .then(engInfo => {
-                employees.push(engInfo);
-            });
-        else
-            getIntern()
-            .then(intrnInfo => {
-                employees.push(intrnInfo);
-            })
-    }); */
-
 }
 
 init();
